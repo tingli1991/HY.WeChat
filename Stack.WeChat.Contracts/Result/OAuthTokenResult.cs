@@ -7,7 +7,7 @@ namespace Stack.WeChat.Contracts.Result
     /// 网页授权返回用户信息
     /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
-    public class OAuthAccessTokenResult
+    public class OAuthTokenResult
     {
         /// <summary>
         /// 网页授权Token

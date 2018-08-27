@@ -1,9 +1,9 @@
-﻿namespace Stack.WeChat.Contracts.Result
+﻿namespace Stack.WeChat.Contracts.Config
 {
     /// <summary>
     /// 微信配置信息
     /// </summary>
-    public class WeChatSettingsResult
+    public class WeChatSettingsConfig
     {
         /// <summary>
         /// AppId
