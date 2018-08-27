@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Stack.WeChat.Contracts\Stack.WeChat.Contracts.csproj" />
+    <ProjectReference Include="..\Stack.WeChat.Utils\Stack.WeChat.Utils.csproj" />
+  </ItemGroup>
+
 </Project>

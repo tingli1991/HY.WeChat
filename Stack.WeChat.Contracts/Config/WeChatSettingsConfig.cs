@@ -21,13 +21,23 @@
         public string AuthorizeUrl { get; set; }
 
         /// <summary>
-        /// 刷新网页授权token
-        /// </summary>
-        public string Refresh_TokenUrl { get; set; }
-
-        /// <summary>
         /// 获取网页授权的token
         /// </summary>
-        public string Access_TokenUrl { get; set; }
+        public string OAuthTokenUrl { get; set; }
+
+        /// <summary>
+        /// 刷新网页授权token
+        /// </summary>
+        public string OAuthRefreshTokenUrl { get; set; }
+
+        /// <summary>
+        /// 普通授权接口地址
+        /// </summary>
+        public string AccessTokenUrl { get; set; }
+
+        /// <summary>
+        /// JSAPITicket接口地址
+        /// </summary>
+        public string JSAPITicketApiUrl { get; set; }
     }
 }
