@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Stack.WeChat.Utils.Log4net;
 using System.IO;
 
 namespace Stack.WeChat.WebAPI
@@ -29,6 +30,7 @@ namespace Stack.WeChat.WebAPI
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseIISIntegration()
             .UseStartup<Startup>()
+            .UseLog4net($"{Directory.GetCurrentDirectory()}\\Config\\log4net.config")
             .Build();
     }
 }

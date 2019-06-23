@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Stack.WeChat.Utils.Autofac;
+using Stack.WeChat.WebAPI.Attributes;
 using Stack.WeChat.WebAPI.Extensions;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
@@ -59,9 +60,9 @@ namespace Stack.WeChat.WebAPI
             {
                 options.SwaggerDoc("v1", new Info
                 {
+                    Description = "Tingli-作者",
                     Version = "Version 1.0",
-                    Description = "Jesse作者",
-                    Title = "微信的API文档"
+                    Title = "微信API文档"
                 });
 
                 var basePath = AppContext.BaseDirectory;
@@ -72,7 +73,7 @@ namespace Stack.WeChat.WebAPI
             });
 
             services.AddDistributedMemoryCache();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(options => options.Filters.Add<GlobalExceptionAttribute>()).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             return AutofacService.RegisterAutofac(services, "Stack.WeChat.Contracts", "Stack.WeChat.Service");
         }
 
@@ -89,8 +90,8 @@ namespace Stack.WeChat.WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
+                    //c.DocExpansion(DocExpansion.None);
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Stack.WeChat.WebAPI");
-                    c.DocExpansion(DocExpansion.None);
                 });
             }
             else

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Stack.WeChat.Contracts\Stack.WeChat.Contracts.csproj" />
+    <ProjectReference Include="..\Stack.WeChat.EFCore\Stack.WeChat.EFCore.csproj" />
     <ProjectReference Include="..\Stack.WeChat.Utils\Stack.WeChat.Utils.csproj" />
   </ItemGroup>
 

@@ -20,7 +20,6 @@ namespace Stack.WeChat.WebAPI.Attributes
         /// 在Action执行之前调用
         /// </summary>
         /// <param name="context"></param>
-        /// <param name="next"></param>
         /// <returns></returns>
         public void OnActionExecuting(ActionExecutingContext context)
         {
