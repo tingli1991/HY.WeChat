@@ -99,7 +99,7 @@ namespace Stack.WeChat.Service
             }
 
             var apiUrl = $"{appSettings.JSAPITicketApiUrl}&access_token={tokenResult.Data}";
-            JsApiTicketResult response = HttpClientHelper.GetResponse<JsApiTicketResult>(apiUrl);
+            JsApiTicketResult response = HttpClientUtil.GetResponse<JsApiTicketResult>(apiUrl);
             if (response.ErrorCode != 0)
             {
                 result.SetError($"{response.ErrorCode}", response.ErrorMessage);
@@ -127,7 +127,7 @@ namespace Stack.WeChat.Service
                 { "grant_type", "client_credential" }
             };
 
-            AccessTokenResult response = HttpClientHelper.GetResponse<AccessTokenResult>(appSettings.AccessTokenUrl, dictParam);
+            AccessTokenResult response = HttpClientUtil.GetResponse<AccessTokenResult>(appSettings.AccessTokenUrl, dictParam);
             if (response.ErrorCode != "0")
             {
                 result.SetError(response.ErrorCode, response.ErrorMessage);

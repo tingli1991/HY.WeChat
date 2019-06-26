@@ -55,7 +55,7 @@ namespace Stack.WeChat.WebAPI.Attributes
 
             string code = $"{context.ActionArguments["code"]}";
             string apiUrl = $"{appSettings.OAuthTokenUrl}?appid={appSettings.AppId}&secret={appSettings.SecretKey}&code={code}&grant_type=authorization_code";
-            baseController.UserTicket = HttpClientHelper.GetResponse<OAuthTokenResult>(apiUrl);
+            baseController.UserTicket = HttpClientUtil.GetResponse<OAuthTokenResult>(apiUrl);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Stack.WeChat.WebAPI.Attributes
                 return userTicket;//还没过期直接返回
 
             string apiUrl = $"{appSettings.OAuthRefreshTokenUrl}?appid={appSettings.AppId}&grant_type=refresh_token&refresh_token={userTicket.RefreshToken}";
-            return HttpClientHelper.GetResponse<OAuthTokenResult>(apiUrl);
+            return HttpClientUtil.GetResponse<OAuthTokenResult>(apiUrl);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Stack.WeChat.Utils.Security
     /// <summary>
     /// 工具类加密
     /// </summary>
-    public class Encrypt
+    public class EncryptUtil
     {
         /// <summary>
         /// 生成SHA1加密字符串

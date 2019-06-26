@@ -14,7 +14,7 @@ namespace Stack.WeChat.Utils.Helper
     /// <summary>
     /// Http客户端请求帮助类
     /// </summary>
-    public class HttpClientHelper
+    public class HttpClientUtil
     {
         /// <summary>
         /// 
@@ -24,7 +24,7 @@ namespace Stack.WeChat.Utils.Helper
         /// <summary>
         /// 
         /// </summary>
-        static HttpClientHelper()
+        static HttpClientUtil()
         {
             HttpClientHandler handler = new HttpClientHandler
             {

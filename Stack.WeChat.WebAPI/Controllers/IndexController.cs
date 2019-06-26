@@ -26,7 +26,7 @@ namespace Stack.WeChat.WebAPI.Controllers
         {
             string result = MessageType.Fail.GetDescription();
             WeChatSettingsConfig settings = WeChatSettings.GetConfig();
-            if (SignatureVerify.CheckSignature(signature, timestamp, nonce, echostr, settings.Token))
+            if (SignatureVerifyUtil.CheckSignature(signature, timestamp, nonce, echostr, settings.Token))
             {
                 result = echostr;
             }

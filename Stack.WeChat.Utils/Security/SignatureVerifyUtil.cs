@@ -5,7 +5,7 @@ namespace Stack.WeChat.Utils.Security
     /// <summary>
     /// 签名验证工具类
     /// </summary>
-    public class SignatureVerify
+    public class SignatureVerifyUtil
     {
         /// <summary>
         /// 验证消息的确来自微信服务器
@@ -31,7 +31,7 @@ namespace Stack.WeChat.Utils.Security
             string[] paramArray = new string[] { token, timestamp, nonce };
             Array.Sort(paramArray);//字典序排序
             string paramStrings = string.Join("", paramArray);//加密前字符串
-            string sha1ParamStrings = Encrypt.SHA1(paramStrings);//加密后字符串
+            string sha1ParamStrings = EncryptUtil.SHA1(paramStrings);//加密后字符串
             return sha1ParamStrings.ToLower() == signature.ToLower();//验证签名是否相等
         }
     }
