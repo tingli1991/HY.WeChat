@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Stack.WeChat.Contracts.Result
+namespace Stack.WeChat.DataContract.Result
 {
     /// <summary>
     /// 微信认证token返回
@@ -13,16 +13,19 @@ namespace Stack.WeChat.Contracts.Result
         /// </summary>
         [JsonProperty("errcode")]
         public string ErrorCode { get; set; }
+
         /// <summary>
         /// 错误消息
         /// </summary>
         [JsonProperty("errmsg")]
         public string ErrorMessage { get; set; }
+
         /// <summary>
         /// 过期时间
         /// </summary>
         [JsonProperty("expires_in")]
         public int Expires_In { get; set; }
+
         /// <summary>
         /// 登陆的票据
         /// </summary>

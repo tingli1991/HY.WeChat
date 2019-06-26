@@ -1,4 +1,5 @@
 ﻿using Stack.WeChat.Contracts.Result;
+using Stack.WeChat.DataContract.Result;
 
 namespace Stack.WeChat.Contracts
 {
@@ -12,6 +13,6 @@ namespace Stack.WeChat.Contracts
         /// </summary>
         /// <param name="pageUrl">h5页面地址</param>
         /// <returns></returns>
-        ResponseResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl);
+        ContractResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl);
     }
 }

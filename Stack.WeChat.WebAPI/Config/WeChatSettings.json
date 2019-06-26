@@ -1,0 +1,10 @@
+﻿{
+  "AppId": "wx4319e514fa582a9d",
+  "SecretKey": "db2e341da92fe6289de03230fcdc435c",
+  "Token": "db2e341da92fe6289de03230fcdc435c",
+  "AccessTokenUrl": "https://api.weixin.qq.com/cgi-bin/token",
+  "AuthorizeUrl": "https://open.weixin.qq.com/connect/oauth2/authorize",
+  "OAuthTokenUrl": "https://api.weixin.qq.com/sns/oauth2/access_token",
+  "OAuthRefreshTokenUrl": "https://api.weixin.qq.com/sns/oauth2/refresh_token",
+  "JSAPITicketApiUrl": "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi"
+}

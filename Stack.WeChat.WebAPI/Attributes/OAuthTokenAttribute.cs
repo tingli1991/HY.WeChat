@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 using Stack.WeChat.Contracts.Result;
 using Stack.WeChat.DataContract.Config;
+using Stack.WeChat.DataContract.Result;
 using Stack.WeChat.Utils.Config;
 using Stack.WeChat.Utils.Helper;
 using Stack.WeChat.WebAPI.Controllers;
@@ -23,7 +24,7 @@ namespace Stack.WeChat.WebAPI.Attributes
         /// <returns></returns>
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            ResponseResult result = new ResponseResult();
+            ContractResult result = new ContractResult();
             WeChatSettingsConfig appSettings = WeChatSettings.GetConfig();
             if (appSettings == null)
             {
@@ -55,7 +56,6 @@ namespace Stack.WeChat.WebAPI.Attributes
             string code = $"{context.ActionArguments["code"]}";
             string apiUrl = $"{appSettings.OAuthTokenUrl}?appid={appSettings.AppId}&secret={appSettings.SecretKey}&code={code}&grant_type=authorization_code";
             baseController.UserTicket = HttpClientHelper.GetResponse<OAuthTokenResult>(apiUrl);
-            string jsonValue = JsonConvert.SerializeObject(baseController.UserTicket);
         }
 
         /// <summary>

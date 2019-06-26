@@ -14,12 +14,12 @@ namespace Stack.WeChat.DataContract.Result
         /// 100：成功
         /// 500：服务器异常
         /// </summary>
-        public string Code { get; set; }
+        public string ErrorCode { get; set; }
 
         /// <summary>
         /// 错误消息
         /// </summary>
-        public string Message { get; set; }
+        public string ErrorMessage { get; set; }
 
         /// <summary>
         /// 扩展字段
@@ -46,8 +46,8 @@ namespace Stack.WeChat.DataContract.Result
         public void SetSuccess()
         {
             MessageType messageType = MessageType.Success;
-            Code = $"{(int)messageType}";
-            Message = messageType.GetDescription();
+            ErrorCode = $"{(int)messageType}";
+            ErrorMessage = messageType.GetDescription();
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Stack.WeChat.DataContract.Result
         public bool IsSuccess()
         {
             MessageType messageType = MessageType.Success;
-            return Code == $"{(int)messageType}";
+            return ErrorCode == $"{(int)messageType}";
         }
 
         /// <summary>
@@ -66,8 +66,19 @@ namespace Stack.WeChat.DataContract.Result
         /// <param name="message">错误信息</param>
         public void SetError(MessageType messageType)
         {
-            Code = $"{(int)MessageType.Fail}";
-            Message = messageType.GetDescription();
+            ErrorCode = $"{(int)MessageType.Fail}";
+            ErrorMessage = messageType.GetDescription();
+        }
+
+        /// <summary>
+        /// 设置错误信息
+        /// </summary>
+        /// <param name="code">错误码</param>
+        /// <param name="message">错误消息</param>
+        public void SetError(string code, string message)
+        {
+            ErrorCode = code;
+            ErrorMessage = message;
         }
     }
 

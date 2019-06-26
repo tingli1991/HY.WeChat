@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Stack.WeChat.Contracts.Result
+namespace Stack.WeChat.DataContract.Result
 {
     /// <summary>
     /// jsdk票据结果

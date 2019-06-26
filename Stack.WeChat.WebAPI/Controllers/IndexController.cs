@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Stack.WeChat.DataContract.Config;
 using Stack.WeChat.DataContract.Enums;
-using Stack.WeChat.Tools.Security;
 using Stack.WeChat.Utils.Config;
+using Stack.WeChat.Utils.Security;
 
 namespace Stack.WeChat.WebAPI.Controllers
 {

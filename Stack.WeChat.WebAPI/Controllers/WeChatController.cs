@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Stack.WeChat.Contracts;
 using Stack.WeChat.Contracts.Result;
+using Stack.WeChat.DataContract.Result;
 
 namespace Stack.WeChat.WebAPI.Controllers
 {
@@ -21,7 +22,7 @@ namespace Stack.WeChat.WebAPI.Controllers
         /// <param name="pageUrl">h5页面Url</param>
         /// <returns></returns>
         [HttpGet("GetJsApiTicket")]
-        public ResponseResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl)
+        public ContractResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl)
         {
             return Service.GetJsApiTicket(pageUrl);
         }

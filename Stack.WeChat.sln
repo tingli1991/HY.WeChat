@@ -15,13 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack.WeChat.Repository", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack.WeChat.Service", "Stack.WeChat.Service\Stack.WeChat.Service.csproj", "{9A772ACA-802D-4D93-8F4F-C7DA58EBBEE1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Stack.WeChat.Services", "03.Stack.WeChat.Services", "{06C20283-8788-4E96-8E83-42340AEA56E3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Stack.WeChat.Services", "01.Stack.WeChat.Services", "{06C20283-8788-4E96-8E83-42340AEA56E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack.WeChat.EFCore", "Stack.WeChat.EFCore\Stack.WeChat.EFCore.csproj", "{6020FFCB-15C2-46E5-B076-34B8D6E60411}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack.WeChat.DataContract", "Stack.WeChat.DataContract\Stack.WeChat.DataContract.csproj", "{C107185B-2D19-41A6-AD28-0C5AF1B0F624}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack.WeChat.Tools", "Stack.WeChat.Tools\Stack.WeChat.Tools.csproj", "{B27668B5-41B3-4EFF-A048-E169A8B0B6A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +55,6 @@ Global
 		{C107185B-2D19-41A6-AD28-0C5AF1B0F624}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C107185B-2D19-41A6-AD28-0C5AF1B0F624}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C107185B-2D19-41A6-AD28-0C5AF1B0F624}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B27668B5-41B3-4EFF-A048-E169A8B0B6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B27668B5-41B3-4EFF-A048-E169A8B0B6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B27668B5-41B3-4EFF-A048-E169A8B0B6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B27668B5-41B3-4EFF-A048-E169A8B0B6A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,7 +66,6 @@ Global
 		{9A772ACA-802D-4D93-8F4F-C7DA58EBBEE1} = {06C20283-8788-4E96-8E83-42340AEA56E3}
 		{6020FFCB-15C2-46E5-B076-34B8D6E60411} = {CB6E5845-1749-4C4D-AC47-286F0D834699}
 		{C107185B-2D19-41A6-AD28-0C5AF1B0F624} = {CB6E5845-1749-4C4D-AC47-286F0D834699}
-		{B27668B5-41B3-4EFF-A048-E169A8B0B6A2} = {CB6E5845-1749-4C4D-AC47-286F0D834699}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F997F2A0-743B-4A74-BECA-3E0D88C654F6}

@@ -1,6 +1,7 @@
 ﻿using Stack.WeChat.Contracts;
 using Stack.WeChat.Contracts.Result;
 using Stack.WeChat.DataContract.Config;
+using Stack.WeChat.DataContract.Result;
 using Stack.WeChat.Utils.Config;
 using Stack.WeChat.Utils.Extensions;
 using Stack.WeChat.Utils.Helper;
@@ -19,9 +20,9 @@ namespace Stack.WeChat.Service
         /// </summary>
         /// <param name="pageUrl">h5页面地址</param>
         /// <returns></returns>
-        public ResponseResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl)
+        public ContractResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl)
         {
-            ResponseResult<WeChatSignatureResult> result = new ResponseResult<WeChatSignatureResult>();
+            ContractResult<WeChatSignatureResult> result = new ContractResult<WeChatSignatureResult>();
             try
             {
                 long timestamp = DateTime.Now.ToUnixTime();
@@ -30,8 +31,7 @@ namespace Stack.WeChat.Service
                 var signatureResult = GetJsApiTicket(noncestr, timestamp, pageUrl, settings);
                 if (signatureResult.ErrorCode != "0")
                 {
-                    result.ErrorCode = signatureResult.ErrorCode;
-                    result.ErrorMessage = signatureResult.ErrorMessage;
+                    result.SetError(signatureResult.ErrorCode, signatureResult.ErrorMessage);
                     return result;
                 }
 
@@ -57,14 +57,13 @@ namespace Stack.WeChat.Service
         /// <param name="timestamp"></param>
         /// <param name="pageUrl">h5页面地址</param>
         /// <returns></returns>
-        public ResponseResult<string> GetJsApiTicket(string noncestr, long timestamp, string pageUrl, WeChatSettingsConfig settings)
+        public ContractResult<string> GetJsApiTicket(string noncestr, long timestamp, string pageUrl, WeChatSettingsConfig settings)
         {
-            ResponseResult<string> result = new ResponseResult<string>();
+            ContractResult<string> result = new ContractResult<string>();
             var ticketResult = GetJsApiTicket(settings);
             if (ticketResult.ErrorCode != "0")
             {
-                result.ErrorCode = ticketResult.ErrorCode;
-                result.ErrorMessage = ticketResult.ErrorMessage;
+                result.SetError(ticketResult.ErrorCode, ticketResult.ErrorMessage);
                 return result;
             }
 
@@ -89,14 +88,13 @@ namespace Stack.WeChat.Service
         /// 获取jsapi_ticket
         /// </summary>
         /// <returns></returns>
-        private ResponseResult<string> GetJsApiTicket(WeChatSettingsConfig appSettings)
+        private ContractResult<string> GetJsApiTicket(WeChatSettingsConfig appSettings)
         {
-            ResponseResult<string> result = new ResponseResult<string>();
+            ContractResult<string> result = new ContractResult<string>();
             var tokenResult = GetAccessToken(appSettings);
             if (tokenResult.ErrorCode != "0")
             {
-                result.ErrorCode = tokenResult.ErrorCode;
-                result.ErrorMessage = tokenResult.ErrorMessage;
+                result.SetError(tokenResult.ErrorCode, tokenResult.ErrorMessage);
                 return result;
             }
 
@@ -104,8 +102,7 @@ namespace Stack.WeChat.Service
             JsApiTicketResult response = HttpClientHelper.GetResponse<JsApiTicketResult>(apiUrl);
             if (response.ErrorCode != 0)
             {
-                result.ErrorCode = $"{response.ErrorCode}";
-                result.ErrorMessage = response.ErrorMessage;
+                result.SetError($"{response.ErrorCode}", response.ErrorMessage);
                 return result;
             }
 
@@ -120,9 +117,9 @@ namespace Stack.WeChat.Service
         /// <param name="appSecret"></param>
         /// <param name="apiUrl"></param>
         /// <returns></returns>
-        private ResponseResult<string> GetAccessToken(WeChatSettingsConfig appSettings)
+        private ContractResult<string> GetAccessToken(WeChatSettingsConfig appSettings)
         {
-            ResponseResult<string> result = new ResponseResult<string>();
+            ContractResult<string> result = new ContractResult<string>();
             var dictParam = new Dictionary<string, string>
             {
                 { "secret", appSettings.SecretKey },
@@ -133,8 +130,7 @@ namespace Stack.WeChat.Service
             AccessTokenResult response = HttpClientHelper.GetResponse<AccessTokenResult>(appSettings.AccessTokenUrl, dictParam);
             if (response.ErrorCode != "0")
             {
-                result.ErrorCode = response.ErrorCode;
-                result.ErrorMessage = response.ErrorMessage;
+                result.SetError(response.ErrorCode, response.ErrorMessage);
                 return result;
             }
 

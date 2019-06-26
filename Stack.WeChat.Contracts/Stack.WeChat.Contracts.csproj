@@ -9,6 +9,11 @@
     <DocumentationFile>bin\Release\netcoreapp2.1\Stack.WeChat.Contracts.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Result\AccessTokenResult.cs" />
+    <Compile Remove="Result\JsApiTicketResult.cs" />
+    <Compile Remove="Result\ResponseResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Stack.WeChat.DataContract\Stack.WeChat.DataContract.csproj" />
   </ItemGroup>
   <ItemGroup>
