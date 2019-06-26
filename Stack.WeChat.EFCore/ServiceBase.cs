@@ -85,7 +85,7 @@ namespace Stack.WeChat.EFCore
                 }
                 catch
                 {
-                    return default;
+                    return default(T);
                 }
             }
             return Context.Set<T>().First();
@@ -107,7 +107,7 @@ namespace Stack.WeChat.EFCore
                 }
                 catch
                 {
-                    return default;
+                    return default(T);
                 }
             }
             return await Context.Set<T>().FirstAsync();
@@ -531,6 +531,7 @@ namespace Stack.WeChat.EFCore
             return await Context.GetPageListAsync(where, pageIndex, pageSize);
         }
         #endregion
+
         /// <summary>
         /// 析构函数
         /// </summary>

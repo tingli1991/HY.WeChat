@@ -24,7 +24,7 @@ namespace Stack.WeChat.DataContract.Result
         /// <summary>
         /// 扩展字段
         /// </summary>
-        public object Extend { get; set; }
+        public object ExtendParam { get; set; }
 
         /// <summary>
         /// 服务器时间
