@@ -14,4 +14,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Stack.WeChat.DataContract\Stack.WeChat.DataContract.csproj" />
+  </ItemGroup>
+
 </Project>

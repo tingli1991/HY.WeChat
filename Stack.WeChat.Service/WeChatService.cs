@@ -1,6 +1,6 @@
 ﻿using Stack.WeChat.Contracts;
-using Stack.WeChat.Contracts.Config;
 using Stack.WeChat.Contracts.Result;
+using Stack.WeChat.DataContract.Config;
 using Stack.WeChat.Utils.Config;
 using Stack.WeChat.Utils.Extensions;
 using Stack.WeChat.Utils.Helper;
@@ -26,7 +26,7 @@ namespace Stack.WeChat.Service
             {
                 long timestamp = DateTime.Now.ToUnixTime();
                 string noncestr = random.GenString(32, true, false, true, false, "");
-                WeChatSettingsConfig settings = AppSettings.GetValue<WeChatSettingsConfig>("WeChatSettings");
+                WeChatSettingsConfig settings = WeChatSettings.GetConfig(); ;
                 var signatureResult = GetJsApiTicket(noncestr, timestamp, pageUrl, settings);
                 if (signatureResult.ErrorCode != "0")
                 {

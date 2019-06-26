@@ -22,6 +22,16 @@ namespace Stack.WeChat.Utils.Config
         /// <summary>
         /// 获取Json配置
         /// </summary>
+        /// <param name="key">配置文件的Key(格式：xxx:yyy，注意中间使用':'分割)</param>
+        /// <returns></returns>
+        public static string GetValue(string key)
+        {
+            return GetValue<string>(key);
+        }
+
+        /// <summary>
+        /// 获取Json配置
+        /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="key">配置文件的Key(格式：xxx:yyy，注意中间使用':'分割)</param>
         /// <returns></returns>
@@ -35,6 +45,17 @@ namespace Stack.WeChat.Utils.Config
         /// <summary>
         /// 获取Json配置
         /// </summary>
+        /// <param name="fileDir">文件目录(格式：D:\JsonConfigs)</param>
+        /// <param name="fileName">文件名称（格式：xxx.json）</param>
+        /// <returns></returns>
+        public static string GetValue(string fileDir, string fileName)
+        {
+            return GetValue<string>(fileDir, fileName);
+        }
+
+        /// <summary>
+        /// 获取Json配置
+        /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="fileDir">文件目录(格式：D:\JsonConfigs)</param>
         /// <param name="fileName">文件名称（格式：xxx.json）</param>
@@ -43,6 +64,18 @@ namespace Stack.WeChat.Utils.Config
         {
             IConfiguration configuration = GetJsonConfiguration(fileDir, fileName);
             return ConfigurationBinder.Get<T>(configuration);
+        }
+
+        /// <summary>
+        /// 获取Json配置
+        /// </summary>
+        /// <param name="fileDir">文件目录(格式：D:\JsonConfigs)</param>
+        /// <param name="fileName">文件名称（格式：xxx.json）</param>
+        /// <param name="key">配置文件的Key(格式：xxx:yyy，注意中间使用':'分割)</param>
+        /// <returns></returns>
+        public static string GetValue(string fileDir, string fileName, string key)
+        {
+            return GetValue<string>(fileDir, fileName, key);
         }
 
         /// <summary>

@@ -29,6 +29,7 @@
     <ProjectReference Include="..\Stack.WeChat.Contracts\Stack.WeChat.Contracts.csproj" />
     <ProjectReference Include="..\Stack.WeChat.DataContract\Stack.WeChat.DataContract.csproj" />
     <ProjectReference Include="..\Stack.WeChat.Service\Stack.WeChat.Service.csproj" />
+    <ProjectReference Include="..\Stack.WeChat.Tools\Stack.WeChat.Tools.csproj" />
     <ProjectReference Include="..\Stack.WeChat.Utils\Stack.WeChat.Utils.csproj" />
   </ItemGroup>
 

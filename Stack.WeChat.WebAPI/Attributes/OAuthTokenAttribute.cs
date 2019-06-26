@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
-using Stack.WeChat.Contracts.Config;
 using Stack.WeChat.Contracts.Result;
+using Stack.WeChat.DataContract.Config;
 using Stack.WeChat.Utils.Config;
 using Stack.WeChat.Utils.Helper;
 using Stack.WeChat.WebAPI.Controllers;
@@ -24,7 +24,7 @@ namespace Stack.WeChat.WebAPI.Attributes
         public void OnActionExecuting(ActionExecutingContext context)
         {
             ResponseResult result = new ResponseResult();
-            WeChatSettingsConfig appSettings = AppSettings.GetValue<WeChatSettingsConfig>("WeChatSettings");
+            WeChatSettingsConfig appSettings = WeChatSettings.GetConfig();
             if (appSettings == null)
             {
                 result.ErrorCode = "100000";
