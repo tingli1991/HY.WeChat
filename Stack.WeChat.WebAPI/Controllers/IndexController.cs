@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Stack.WeChat.DataContract.Config;
 using Stack.WeChat.DataContract.Enums;
-using Stack.WeChat.Utils.Config;
-using Stack.WeChat.Utils.Security;
+using Stack.WeChat.MP.Config;
+using Stack.WeChat.MP.Security;
 
 namespace Stack.WeChat.WebAPI.Controllers
 {
@@ -25,8 +24,7 @@ namespace Stack.WeChat.WebAPI.Controllers
         public ActionResult Get(string signature, string timestamp, string nonce, string echostr)
         {
             string result = MessageType.Fail.GetDescription();
-            WeChatSettingsConfig settings = WeChatSettings.GetConfig();
-            if (SignatureVerifyUtil.CheckSignature(signature, timestamp, nonce, echostr, settings.Token))
+            if (SignatureVerifyUtil.CheckSignature(signature, timestamp, nonce, echostr, WeChatSettingsUtil.Settings.Token))
             {
                 result = echostr;
             }

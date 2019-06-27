@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Newtonsoft.Json;
 using Stack.WeChat.Contracts.Result;
 using Stack.WeChat.DataContract.Config;
 using Stack.WeChat.DataContract.Result;
-using Stack.WeChat.Utils.Config;
+using Stack.WeChat.MP.Config;
 using Stack.WeChat.Utils.Helper;
 using Stack.WeChat.WebAPI.Controllers;
 using System;
@@ -18,6 +17,15 @@ namespace Stack.WeChat.WebAPI.Attributes
     public class OAuthTokenAttribute : Attribute, IActionFilter
     {
         /// <summary>
+        /// action调用结束后不做任何处理
+        /// </summary>
+        /// <param name="context"></param>
+        public void OnActionExecuted(ActionExecutedContext context)
+        {
+
+        }
+
+        /// <summary>
         /// 在Action执行之前调用
         /// </summary>
         /// <param name="context"></param>
@@ -25,19 +33,7 @@ namespace Stack.WeChat.WebAPI.Attributes
         public void OnActionExecuting(ActionExecutingContext context)
         {
             ContractResult result = new ContractResult();
-            WeChatSettingsConfig appSettings = WeChatSettings.GetConfig();
-            if (appSettings == null)
-            {
-                result.ErrorCode = "100000";
-                result.ErrorMessage = "微信配置异常";
-                context.Result = new ContentResult()
-                {
-                    StatusCode = 200,
-                    Content = JsonConvert.SerializeObject(result)
-                };
-                return;
-            }
-
+            var appSettings = WeChatSettingsUtil.Settings;
             var baseController = ((BaseController)context.Controller);
             if (baseController.UserTicket != null)
             {
@@ -56,15 +52,6 @@ namespace Stack.WeChat.WebAPI.Attributes
             string code = $"{context.ActionArguments["code"]}";
             string apiUrl = $"{appSettings.OAuthTokenUrl}?appid={appSettings.AppId}&secret={appSettings.SecretKey}&code={code}&grant_type=authorization_code";
             baseController.UserTicket = HttpClientUtil.GetResponse<OAuthTokenResult>(apiUrl);
-        }
-
-        /// <summary>
-        /// action调用结束后不做任何处理
-        /// </summary>
-        /// <param name="context"></param>
-        public void OnActionExecuted(ActionExecutedContext context)
-        {
-
         }
 
         /// <summary>

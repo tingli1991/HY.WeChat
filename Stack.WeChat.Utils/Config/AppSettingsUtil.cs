@@ -7,7 +7,7 @@ namespace Stack.WeChat.Utils.Config
     /// <summary>
     /// 应用程序配置
     /// </summary>
-    public class AppSettings
+    public class AppSettingsUtil
     {
         /// <summary>
         /// 线程对象锁

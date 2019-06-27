@@ -2,7 +2,7 @@
 using Stack.WeChat.Contracts.Result;
 using Stack.WeChat.DataContract.Config;
 using Stack.WeChat.DataContract.Result;
-using Stack.WeChat.Utils.Config;
+using Stack.WeChat.MP.Config;
 using Stack.WeChat.Utils.Extensions;
 using Stack.WeChat.Utils.Helper;
 using System;
@@ -27,8 +27,7 @@ namespace Stack.WeChat.Service
             {
                 long timestamp = DateTime.Now.ToUnixTime();
                 string noncestr = random.GenString(32, true, false, true, false, "");
-                WeChatSettingsConfig settings = WeChatSettings.GetConfig(); ;
-                var signatureResult = GetJsApiTicket(noncestr, timestamp, pageUrl, settings);
+                var signatureResult = GetJsApiTicket(noncestr, timestamp, pageUrl, WeChatSettingsUtil.Settings);
                 if (signatureResult.ErrorCode != "0")
                 {
                     result.SetError(signatureResult.ErrorCode, signatureResult.ErrorMessage);
@@ -38,9 +37,9 @@ namespace Stack.WeChat.Service
                 result.Data = new WeChatSignatureResult()
                 {
                     NonceStr = noncestr,
-                    AppId = settings.AppId,
                     Timestamp = timestamp,
-                    Signature = signatureResult.Data
+                    Signature = signatureResult.Data,
+                    AppId = WeChatSettingsUtil.Settings.AppId
                 };
             }
             catch (Exception)

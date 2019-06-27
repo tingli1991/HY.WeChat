@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Stack.WeChat.Utils.Security
+namespace Stack.WeChat.MP.Security
 {
     /// <summary>
     /// 签名验证工具类

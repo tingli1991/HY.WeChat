@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Stack.WeChat.Utils.Security
+namespace Stack.WeChat.MP.Security
 {
     /// <summary>
     /// 工具类加密
