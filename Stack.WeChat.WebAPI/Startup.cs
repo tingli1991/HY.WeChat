@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Serialization;
 using Stack.WeChat.Utils.Autofac;
 using Stack.WeChat.WebAPI.Attributes;
 using Stack.WeChat.WebAPI.Extensions;
@@ -73,7 +74,13 @@ namespace Stack.WeChat.WebAPI
             });
 
             services.AddDistributedMemoryCache();
-            services.AddMvc(options => options.Filters.Add<GlobalExceptionAttribute>()).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(options => options.Filters.Add<GlobalExceptionAttribute>())
+                .AddJsonOptions(options =>
+                {
+                    options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss.fff";
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             return AutofacService.RegisterAutofac(services, "Stack.WeChat.Contracts", "Stack.WeChat.Service");
         }
 
@@ -102,6 +109,7 @@ namespace Stack.WeChat.WebAPI
             app.UseSession();
             app.UseCors("AllowAnyOrigin");
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }

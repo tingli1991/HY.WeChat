@@ -11,6 +11,11 @@ namespace Stack.WeChat.Utils.Log4net
     class Log4netContext
     {
         /// <summary>
+        /// 日志库
+        /// </summary>
+        private static ILoggerRepository repository;
+
+        /// <summary>
         /// 日志记录器
         /// </summary>
         protected internal static ILog Log { get; private set; }
@@ -22,7 +27,7 @@ namespace Stack.WeChat.Utils.Log4net
         public static void Configure(string configPath)
         {
             FileInfo file = new FileInfo(configPath);
-            ILoggerRepository repository = LogManager.CreateRepository("NETCoreRepository");
+            repository = LogManager.CreateRepository("NETCoreRepository");
             log4net.Config.XmlConfigurator.ConfigureAndWatch(repository, file);
 
             Log = LogManager.GetLogger(repository.Name, "");
@@ -36,7 +41,7 @@ namespace Stack.WeChat.Utils.Log4net
         /// <returns></returns>
         public static ILog GetLogger(Type type)
         {
-            return LogManager.GetLogger(type);
+            return LogManager.GetLogger(repository.Name, type);
         }
 
         /// <summary>

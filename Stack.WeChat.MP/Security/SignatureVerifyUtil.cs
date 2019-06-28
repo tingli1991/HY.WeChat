@@ -17,13 +17,12 @@ namespace Stack.WeChat.MP.Security
         /// <param name="signature">微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数</param>
         /// <param name="timestamp">时间戳</param>
         /// <param name="nonce">随机数</param>
-        /// <param name="echostr">随机字符串</param>
         /// <param name="token">token密钥</param>
         /// <returns></returns>
-        public static bool CheckSignature(string signature, string timestamp, string nonce, string echostr, string token)
+        public static bool CheckSignature(string signature, string timestamp, string nonce, string token)
         {
             if (string.IsNullOrEmpty(signature) || string.IsNullOrEmpty(timestamp)
-                || string.IsNullOrEmpty(nonce) || string.IsNullOrEmpty(echostr) || string.IsNullOrEmpty(token))
+                || string.IsNullOrEmpty(nonce) || string.IsNullOrEmpty(token))
             {
                 return false;
             }

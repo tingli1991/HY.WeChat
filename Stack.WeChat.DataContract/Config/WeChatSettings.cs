@@ -1,25 +1,12 @@
-﻿namespace Stack.WeChat.DataContract.Config
+﻿using System.Collections.Generic;
+
+namespace Stack.WeChat.DataContract.Config
 {
     /// <summary>
     /// 微信配置信息
     /// </summary>
-    public class WeChatSettingsConfig
+    public class WeChatSettings
     {
-        /// <summary>
-        /// AppId
-        /// </summary>
-        public string AppId { get; set; }
-
-        /// <summary>
-        /// 密钥
-        /// </summary>
-        public string SecretKey { get; set; }
-
-        /// <summary>
-        /// Token密钥
-        /// </summary>
-        public string Token { get; set; }
-
         /// <summary>
         /// 授权地址
         /// </summary>
@@ -44,5 +31,10 @@
         /// JSAPITicket接口地址
         /// </summary>
         public string JSAPITicketApiUrl { get; set; }
+
+        /// <summary>
+        /// 微信公众号账户信息列表
+        /// </summary>
+        public List<WeChatAccount> AccountList { get; set; }
     }
 }

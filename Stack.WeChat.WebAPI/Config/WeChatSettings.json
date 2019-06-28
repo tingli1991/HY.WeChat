@@ -1,7 +1,13 @@
 ﻿{
-  "AppId": "wx4319e514fa582a9d",
-  "SecretKey": "db2e341da92fe6289de03230fcdc435c",
-  "Token": "db2e341da92fe6289de03230fcdc435c",
+  "AccountList": [
+    {
+      "EncodingAESKey": "",
+      "AppId": "wx6fe5568ecfc233b3",
+      "Token": "9EDB58C131DC4F4DBA91CFBCB779F2D9",
+      "SecretKey": "31dd005a97aecc20f15a1e6cb4f50d00",
+      "Description": "开发者测试公众号"
+    }
+  ],
   "AccessTokenUrl": "https://api.weixin.qq.com/cgi-bin/token",
   "AuthorizeUrl": "https://open.weixin.qq.com/connect/oauth2/authorize",
   "OAuthTokenUrl": "https://api.weixin.qq.com/sns/oauth2/access_token",

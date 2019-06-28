@@ -8,6 +8,27 @@ namespace Stack.WeChat.DataContract.Enums
     public enum MessageType
     {
         /// <summary>
+        /// 无效的Url地址
+        /// </summary>
+        [Description("无效的Url地址！")]
+        InvalidUrl = -4,
+
+        /// <summary>
+        /// 配置错误
+        /// </summary>
+        [Description("配置错误！")]
+        ConfigErr = -3,
+
+        [Description("未知AppId！")]
+        NoAppId = -2,
+
+        /// <summary>
+        /// 微信服务器验证签名失败
+        /// </summary>
+        [Description("签名校验失败！")]
+        CheckSignFail = -1,
+
+        /// <summary>
         /// 业务处理失败
         /// </summary>
         [Description("处理失败！")]
@@ -22,7 +43,7 @@ namespace Stack.WeChat.DataContract.Enums
         /// <summary>
         /// 服务器异常
         /// </summary>
-        [Description("服务器异常，请联系客服")]
+        [Description("服务器异常，请联系客服！")]
         Exception = 500
     }
 }

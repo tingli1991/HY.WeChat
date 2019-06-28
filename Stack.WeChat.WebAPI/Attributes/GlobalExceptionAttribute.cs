@@ -1,6 +1,7 @@
 ﻿using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Stack.WeChat.DataContract.Enums;
 using Stack.WeChat.DataContract.Result;
 using Stack.WeChat.Utils.Log4net;
 using System;
@@ -19,10 +20,11 @@ namespace Stack.WeChat.WebAPI.Attributes
         /// <param name="context"></param>
         public void OnException(ExceptionContext context)
         {
-            var result = new ContractResult();
             Exception ex = context.Exception;
             context.ExceptionHandled = true;
-            context.Result = new ObjectResult(result);
+            var result = new ContractResult();
+            result.SetError(MessageType.Exception);
+            context.Result = new JsonResult(result);
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.OK;
             ILog _log = Log4netUtil.GetLogger<GlobalExceptionAttribute>();
             _log.Error($"【全局异常】发生未经处理的全局异常：{ex}");

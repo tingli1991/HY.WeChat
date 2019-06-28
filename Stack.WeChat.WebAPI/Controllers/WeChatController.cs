@@ -9,7 +9,7 @@ namespace Stack.WeChat.WebAPI.Controllers
     /// 微信接口
     /// </summary>
     [Route("api/WeChat")]
-    public class WeChatController : Controller
+    public class WeChatController : BaseController
     {
         /// <summary>
         /// 微信服务
@@ -24,7 +24,7 @@ namespace Stack.WeChat.WebAPI.Controllers
         [HttpGet("GetJsApiTicket")]
         public ContractResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl)
         {
-            return Service.GetJsApiTicket(pageUrl);
+            return Service.GetJsApiTicket(pageUrl, Account);
         }
     }
 }

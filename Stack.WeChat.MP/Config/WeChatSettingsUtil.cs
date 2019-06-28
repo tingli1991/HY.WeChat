@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Stack.WeChat.DataContract.Config;
 using System.IO;
+using System.Linq;
 
 namespace Stack.WeChat.MP.Config
 {
@@ -9,6 +10,11 @@ namespace Stack.WeChat.MP.Config
     /// </summary>
     public class WeChatSettingsUtil
     {
+        /// <summary>
+        /// 私有构造函数，禁止使用new关键字创建对象
+        /// </summary>
+        private WeChatSettingsUtil() { }
+
         /// <summary>
         /// 配置文件
         /// </summary>
@@ -27,47 +33,29 @@ namespace Stack.WeChat.MP.Config
         /// <summary>
         /// 配置信息
         /// </summary>
-        public static readonly WeChatSettingsConfig Settings;
-
-        /// <summary>
-        /// 静态构造函数
-        /// </summary>
-        static WeChatSettingsUtil()
-        {
-            Settings = GetSettings();
-        }
+        public static WeChatSettings Settings { get => GetSettings(); }
 
         /// <summary>
         /// 获取Json配置
         /// </summary>
         /// <returns></returns>
-        public static WeChatSettingsConfig GetSettings()
+        public static WeChatSettings GetSettings()
         {
             IConfiguration configuration = GetJsonConfiguration();
-            return ConfigurationBinder.Get<WeChatSettingsConfig>(configuration);
+            return ConfigurationBinder.Get<WeChatSettings>(configuration);
         }
 
         /// <summary>
-        /// 获取Json配置
+        /// 获取账户配置
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="key">配置文件的Key(格式：xxx:yyy，注意中间使用':'分割)</param>
+        /// <param name="appId">AppId</param>
         /// <returns></returns>
-        public static string GetValue(string key)
+        public static WeChatAccount GetAccountConfig(string appId)
         {
-            return GetValue<string>(key);
-        }
+            if (string.IsNullOrEmpty(appId) || Settings.AccountList == null | !Settings.AccountList.Any())
+                return null;
 
-        /// <summary>
-        /// 获取Json配置
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="key">配置文件的Key(格式：xxx:yyy，注意中间使用':'分割)</param>
-        /// <returns></returns>
-        public static T GetValue<T>(string key)
-        {
-            IConfiguration configuration = GetJsonConfiguration();
-            return ConfigurationBinder.Get<T>(configuration);
+            return Settings.AccountList.FirstOrDefault(e => e.AppId == appId);
         }
 
         /// <summary>

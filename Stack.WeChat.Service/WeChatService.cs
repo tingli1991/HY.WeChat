@@ -19,33 +19,27 @@ namespace Stack.WeChat.Service
         /// 获取签名
         /// </summary>
         /// <param name="pageUrl">h5页面地址</param>
+        /// <param name="account">微信账户配置</param>
         /// <returns></returns>
-        public ContractResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl)
+        public ContractResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl, WeChatAccount account)
         {
             ContractResult<WeChatSignatureResult> result = new ContractResult<WeChatSignatureResult>();
-            try
+            long timestamp = DateTime.Now.ToUnixTime();
+            string noncestr = random.GenString(32, true, false, true, false, "");
+            var signatureResult = GetJsApiTicket(noncestr, timestamp, pageUrl, account);
+            if (signatureResult.ErrorCode != "0")
             {
-                long timestamp = DateTime.Now.ToUnixTime();
-                string noncestr = random.GenString(32, true, false, true, false, "");
-                var signatureResult = GetJsApiTicket(noncestr, timestamp, pageUrl, WeChatSettingsUtil.Settings);
-                if (signatureResult.ErrorCode != "0")
-                {
-                    result.SetError(signatureResult.ErrorCode, signatureResult.ErrorMessage);
-                    return result;
-                }
+                result.SetError(signatureResult.ErrorCode, signatureResult.ErrorMessage);
+                return result;
+            }
 
-                result.Data = new WeChatSignatureResult()
-                {
-                    NonceStr = noncestr,
-                    Timestamp = timestamp,
-                    Signature = signatureResult.Data,
-                    AppId = WeChatSettingsUtil.Settings.AppId
-                };
-            }
-            catch (Exception)
+            result.Data = new WeChatSignatureResult()
             {
-                //TODO:需要记录错误日志
-            }
+                NonceStr = noncestr,
+                Timestamp = timestamp,
+                AppId = account.AppId,
+                Signature = signatureResult.Data
+            };
             return result;
         }
 
@@ -55,11 +49,12 @@ namespace Stack.WeChat.Service
         /// <param name="noncestr"></param>
         /// <param name="timestamp"></param>
         /// <param name="pageUrl">h5页面地址</param>
+        /// <param name="account">微信账户配置</param>
         /// <returns></returns>
-        public ContractResult<string> GetJsApiTicket(string noncestr, long timestamp, string pageUrl, WeChatSettingsConfig settings)
+        public ContractResult<string> GetJsApiTicket(string noncestr, long timestamp, string pageUrl, WeChatAccount account)
         {
             ContractResult<string> result = new ContractResult<string>();
-            var ticketResult = GetJsApiTicket(settings);
+            var ticketResult = GetJsApiTicket(account);
             if (ticketResult.ErrorCode != "0")
             {
                 result.SetError(ticketResult.ErrorCode, ticketResult.ErrorMessage);
@@ -86,18 +81,19 @@ namespace Stack.WeChat.Service
         /// <summary>
         /// 获取jsapi_ticket
         /// </summary>
+        /// <param name="account">微信账户配置</param>
         /// <returns></returns>
-        private ContractResult<string> GetJsApiTicket(WeChatSettingsConfig appSettings)
+        private ContractResult<string> GetJsApiTicket(WeChatAccount account)
         {
             ContractResult<string> result = new ContractResult<string>();
-            var tokenResult = GetAccessToken(appSettings);
+            var tokenResult = GetAccessToken(account);
             if (tokenResult.ErrorCode != "0")
             {
                 result.SetError(tokenResult.ErrorCode, tokenResult.ErrorMessage);
                 return result;
             }
 
-            var apiUrl = $"{appSettings.JSAPITicketApiUrl}&access_token={tokenResult.Data}";
+            var apiUrl = $"{WeChatSettingsUtil.Settings.JSAPITicketApiUrl}&access_token={tokenResult.Data}";
             JsApiTicketResult response = HttpClientUtil.GetResponse<JsApiTicketResult>(apiUrl);
             if (response.ErrorCode != 0)
             {
@@ -116,17 +112,18 @@ namespace Stack.WeChat.Service
         /// <param name="appSecret"></param>
         /// <param name="apiUrl"></param>
         /// <returns></returns>
-        private ContractResult<string> GetAccessToken(WeChatSettingsConfig appSettings)
+        private ContractResult<string> GetAccessToken(WeChatAccount account)
         {
             ContractResult<string> result = new ContractResult<string>();
             var dictParam = new Dictionary<string, string>
             {
-                { "secret", appSettings.SecretKey },
-                { "appid", $"{appSettings.AppId}" },
+                { "secret", account.SecretKey },
+                { "appid", $"{account.AppId}" },
                 { "grant_type", "client_credential" }
             };
 
-            AccessTokenResult response = HttpClientUtil.GetResponse<AccessTokenResult>(appSettings.AccessTokenUrl, dictParam);
+            string accessTokenUrl = WeChatSettingsUtil.Settings.AccessTokenUrl;
+            AccessTokenResult response = HttpClientUtil.GetResponse<AccessTokenResult>(accessTokenUrl, dictParam);
             if (response.ErrorCode != "0")
             {
                 result.SetError(response.ErrorCode, response.ErrorMessage);

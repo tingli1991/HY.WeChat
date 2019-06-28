@@ -1,38 +1,23 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Stack.WeChat.Contracts.Result;
+﻿using Microsoft.AspNetCore.Mvc;
+using Stack.WeChat.DataContract.Config;
+using Stack.WeChat.WebAPI.Attributes;
 
 namespace Stack.WeChat.WebAPI.Controllers
 {
     /// <summary>
     /// 基类控制器
     /// </summary>
+    [GlobalConfig]
     public class BaseController : Controller
     {
         /// <summary>
-        /// 
+        /// AppId
         /// </summary>
-        private const string SESSIONKEY = "Stack.WeChat.WebAPI:OPENID";
+        public string AppId { get; set; }
 
         /// <summary>
-        /// 用户票据
+        /// 微信公众号账户信息
         /// </summary>
-        public OAuthTokenResult UserTicket
-        {
-            get
-            {
-                string ticketString = HttpContext.Session.GetString(SESSIONKEY);
-                if (string.IsNullOrEmpty(ticketString))
-                    return null;
-
-                return JsonConvert.DeserializeObject<OAuthTokenResult>(ticketString);
-            }
-            set
-            {
-                string ticketString = JsonConvert.SerializeObject(value);
-                HttpContext.Session.SetString(SESSIONKEY, ticketString);
-            }
-        }
+        public WeChatAccount Account { get; set; }
     }
 }
