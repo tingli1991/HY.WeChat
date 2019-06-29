@@ -15,7 +15,7 @@ namespace Stack.WeChat.WebAPI.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            return "";
+            return "This is Check OAuth2.0 API";
         }
     }
 }
