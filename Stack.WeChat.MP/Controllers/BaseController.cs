@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Stack.WeChat.DataContract.Config;
-using Stack.WeChat.WebAPI.Attributes;
+using Stack.WeChat.MP.Attributes;
 
-namespace Stack.WeChat.WebAPI.Controllers
+namespace Stack.WeChat.MP.Controllers
 {
     /// <summary>
     /// 基类控制器

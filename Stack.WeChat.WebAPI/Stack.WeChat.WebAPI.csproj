@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Stack.WeChat.Contracts\Stack.WeChat.Contracts.csproj" />
+    <ProjectReference Include="..\Stack.WeChat.Log4Net\Stack.WeChat.Log4Net.csproj" />
     <ProjectReference Include="..\Stack.WeChat.MP\Stack.WeChat.MP.csproj" />
     <ProjectReference Include="..\Stack.WeChat.Service\Stack.WeChat.Service.csproj" />
   </ItemGroup>

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Stack.WeChat.Contracts.Result;
+using Stack.WeChat.MP.Attributes;
+using Stack.WeChat.MP.Controllers;
 using Stack.WeChat.WebAPI.Attributes;
 
 namespace Stack.WeChat.WebAPI.Controllers

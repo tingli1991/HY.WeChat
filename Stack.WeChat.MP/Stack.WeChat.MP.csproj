@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Attributes\GlobalConfigAttribute.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
@@ -17,9 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Stack.WeChat.DataContract\Stack.WeChat.DataContract.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Attributes\" />
+    <ProjectReference Include="..\Stack.WeChat.Log4Net\Stack.WeChat.Log4Net.csproj" />
   </ItemGroup>
 </Project>

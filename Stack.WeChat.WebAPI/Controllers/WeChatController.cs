@@ -2,13 +2,14 @@
 using Stack.WeChat.Contracts;
 using Stack.WeChat.Contracts.Result;
 using Stack.WeChat.DataContract.Result;
+using Stack.WeChat.MP.Controllers;
 
 namespace Stack.WeChat.WebAPI.Controllers
 {
     /// <summary>
     /// 微信接口
     /// </summary>
-    [Route("api/WeChat")]
+    [Route("api/wechat")]
     public class WeChatController : BaseController
     {
         /// <summary>

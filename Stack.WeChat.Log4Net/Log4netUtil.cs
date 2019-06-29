@@ -1,7 +1,7 @@
 ﻿using log4net;
 using System;
 
-namespace Stack.WeChat.Utils.Log4net
+namespace Stack.WeChat.Log4Net
 {
     /// <summary>
     /// Log4net日志工具类

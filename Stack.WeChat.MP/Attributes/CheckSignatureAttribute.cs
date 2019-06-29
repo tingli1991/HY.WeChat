@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Stack.WeChat.DataContract.Config;
 using Stack.WeChat.DataContract.Enums;
 using Stack.WeChat.DataContract.Result;
+using Stack.WeChat.Log4Net;
+using Stack.WeChat.MP.Controllers;
 using Stack.WeChat.MP.Security;
-using Stack.WeChat.Utils.Log4net;
-using Stack.WeChat.WebAPI.Controllers;
 using System;
 
-namespace Stack.WeChat.WebAPI.Attributes
+namespace Stack.WeChat.MP.Attributes
 {
     /// <summary>
     ///  微信签名校验

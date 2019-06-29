@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Stack.WeChat.EFCore
+namespace Stack.WeChat.EntityFrameworkCore
 {
     /// <summary>
     /// 服务处理基类

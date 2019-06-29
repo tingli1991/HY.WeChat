@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Stack.WeChat.DataContract.Result;
-using Stack.WeChat.EFCore.Extensions;
+using Stack.WeChat.EntityFrameworkCore.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Stack.WeChat.EFCore
+namespace Stack.WeChat.EntityFrameworkCore
 {
     /// <summary>
     /// 服务基类实现

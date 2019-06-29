@@ -6,7 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Stack.WeChat.EFCore.Extensions
+namespace Stack.WeChat.EntityFrameworkCore.Extensions
 {
     /// <summary>
     /// Added 对象为新对象，并且已添加到对象上下文，但尚未调用 SaveChanges 方法。 在保存更改后，对象状态将更改为 Unchanged。 状态为 Added 的对象在 ObjectStateEntry 中没有原始值。  

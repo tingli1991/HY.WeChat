@@ -3,7 +3,7 @@ using log4net.Repository;
 using System;
 using System.IO;
 
-namespace Stack.WeChat.Utils.Log4net
+namespace Stack.WeChat.Log4Net
 {
     /// <summary>
     /// Log4net日志上下文

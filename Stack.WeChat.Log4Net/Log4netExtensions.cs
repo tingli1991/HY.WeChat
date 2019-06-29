@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 
-namespace Stack.WeChat.Utils.Log4net
+namespace Stack.WeChat.Log4Net
 {
     /// <summary>
     /// log4net扩展

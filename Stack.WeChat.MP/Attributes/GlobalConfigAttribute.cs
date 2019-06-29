@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 using Stack.WeChat.DataContract.Enums;
 using Stack.WeChat.DataContract.Result;
+using Stack.WeChat.Log4Net;
 using Stack.WeChat.MP.Config;
-using Stack.WeChat.Utils.Log4net;
-using Stack.WeChat.WebAPI.Controllers;
+using Stack.WeChat.MP.Controllers;
 using System;
 using System.Linq;
 
-namespace Stack.WeChat.WebAPI.Attributes
+namespace Stack.WeChat.MP.Attributes
 {
     /// <summary>
     ///  全局配置过滤器

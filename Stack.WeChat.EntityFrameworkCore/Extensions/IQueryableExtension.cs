@@ -1,19 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Stack.WeChat.DataContract.Result;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Stack.WeChat.EFCore.Extensions
+namespace Stack.WeChat.EntityFrameworkCore.Extensions
 {
     /// <summary>
     /// 查询构造器扩展类
     /// </summary>
     public static class IQueryableExtension
     {
-        #region ToPagerSource 分页查询
         /// <summary>
         /// 分页查询方法
         /// </summary>
@@ -83,6 +80,5 @@ namespace Stack.WeChat.EFCore.Extensions
             }
             return result;
         }
-        #endregion
     }
 }

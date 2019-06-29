@@ -1,8 +1,9 @@
 ﻿using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Stack.WeChat.DataContract.Param;
-using Stack.WeChat.Utils.Log4net;
-using Stack.WeChat.WebAPI.Attributes;
+using Stack.WeChat.Log4Net;
+using Stack.WeChat.MP.Attributes;
+using Stack.WeChat.MP.Controllers;
 using System.IO;
 using System.Text;
 
