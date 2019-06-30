@@ -1,11 +1,16 @@
 ﻿using log4net;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Stack.WeChat.DataContract.Param;
 using Stack.WeChat.Log4Net;
 using Stack.WeChat.MP.Attributes;
 using Stack.WeChat.MP.Controllers;
+using Stack.WeChat.MP.Utils;
+using System;
 using System.IO;
+using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 namespace Stack.WeChat.WebAPI.Controllers
 {
@@ -13,7 +18,7 @@ namespace Stack.WeChat.WebAPI.Controllers
     /// 微信交互出入口控制器
     /// </summary>
     [Route("api/index")]
-    public class IndexController : MP.Controllers.BaseController
+    public class IndexController : BaseController
     {
         /// <summary>
         /// 日志记录器
@@ -40,11 +45,9 @@ namespace Stack.WeChat.WebAPI.Controllers
         [HttpPost, CheckSignature]
         public ActionResult Post(IndexPostParam param)
         {
-            StreamReader readStream = new StreamReader(Request.Body, Encoding.UTF8);
-            string sourceCode = readStream.ReadToEnd();
-
-            //XDocument bodyXml = XmlUtility.Convert(Request.Body);
-            _log.Debug($"【微信消息接口接入入口】文件流参数：{sourceCode}");
+            XDocument bodyXml = XmlUtility.Convert(Request.Body);
+            XElement msgType = bodyXml.Descendants().FirstOrDefault(e => e.Name == "MsgType");
+            _log.Debug($"【微信消息接口接入入口】MsgType：{msgType.Value}，Url入参字符串：{Request.QueryString}，Xml入参字符串：{JsonConvert.SerializeObject(bodyXml)}");
             return Content("");
         }
     }

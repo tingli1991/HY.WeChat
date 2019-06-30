@@ -1,2 +1,33 @@
-[DEBUG] 2019-06-30 02:22:15,595  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-30 02:24:17,522  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:11:01,269  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:12:03,976 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：<xml><ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
+<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
+<CreateTime>1561910879</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0]]></PicUrl>
+<MsgId>22361186792637947</MsgId>
+<MediaId><![CDATA[-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts]]></MediaId>
+</xml>,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
+[DEBUG] 2019-07-01 00:13:03,237  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:25:52,355  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:28:34,669  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:34:26,782  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:35:14,890 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：<xml><ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
+<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
+<CreateTime>1561910879</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0]]></PicUrl>
+<MsgId>22361186792637947</MsgId>
+<MediaId><![CDATA[-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts]]></MediaId>
+</xml>,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
+[DEBUG] 2019-07-01 00:36:52,787  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:37:49,139 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
+[DEBUG] 2019-07-01 00:38:37,812  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:38:51,312 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
+[DEBUG] 2019-07-01 00:51:41,910  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 00:57:09,398  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 01:02:27,226  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 01:02:37,280 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：<MsgType><![CDATA[image]]></MsgType>,Url参数：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml参数：{"xml":{"ToUserName":{"#cdata-section":"gh_278e0d60f6d6"},"#text":["\n","\n","\n","\n","\n","\n","\n"],"FromUserName":{"#cdata-section":"oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"},"CreateTime":"1561910879","MsgType":{"#cdata-section":"image"},"PicUrl":{"#cdata-section":"http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0"},"MsgId":"22361186792637947","MediaId":{"#cdata-section":"-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts"}}}
+[DEBUG] 2019-07-01 01:05:56,789  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 01:09:14,996  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 01:10:48,007  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-01 01:10:55,638 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：<MsgType><![CDATA[image]]></MsgType>，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：{"xml":{"ToUserName":{"#cdata-section":"gh_278e0d60f6d6"},"#text":["\n","\n","\n","\n","\n","\n","\n"],"FromUserName":{"#cdata-section":"oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"},"CreateTime":"1561910879","MsgType":{"#cdata-section":"image"},"PicUrl":{"#cdata-section":"http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0"},"MsgId":"22361186792637947","MediaId":{"#cdata-section":"-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts"}}}
