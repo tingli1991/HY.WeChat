@@ -43,7 +43,7 @@ namespace Stack.WeChat.MP.Attributes
             string signature = query["signature"];//微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数
             string openId = query.ContainsKey("openid") ? $"{query["openid"]}" : "";//用户的标识，对当前公众号唯一
             string echostr = query.ContainsKey("echostr") ? $"{query["echostr"]}" : "";//随机字符串
-            WeChatAccount account = ((BaseController)context.Controller).Account;//微信账户信息配置
+            WeChatAccount account = ((Controllers.BaseController)context.Controller).Account;//微信账户信息配置
             if (!SignatureVerifyUtil.CheckSignature(signature, timestamp, nonce, account.Token))
             {
                 ContractResult result = new ContractResult();

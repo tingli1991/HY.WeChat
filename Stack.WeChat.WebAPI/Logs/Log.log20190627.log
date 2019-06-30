@@ -1,5 +1,0 @@
-[DEBUG] 2019-06-27 21:59:58,050  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-27 22:02:32,601  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-27 22:08:29,289  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-27 22:08:45,382 Stack.WeChat.WebAPI.Controllers.IndexController 【微信服务器验证】请求参数=》signature：asdfasdf，timestamp：sdfasdfasdf，nonce：asdfasdfasdf，echostr：sdfasdf
-[DEBUG] 2019-06-27 22:33:23,493  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。

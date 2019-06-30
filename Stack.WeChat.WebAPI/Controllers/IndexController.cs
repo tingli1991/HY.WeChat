@@ -13,7 +13,7 @@ namespace Stack.WeChat.WebAPI.Controllers
     /// 微信交互出入口控制器
     /// </summary>
     [Route("api/index")]
-    public class IndexController : BaseController
+    public class IndexController : MP.Controllers.BaseController
     {
         /// <summary>
         /// 日志记录器

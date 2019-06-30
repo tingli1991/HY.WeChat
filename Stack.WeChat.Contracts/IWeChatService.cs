@@ -1,6 +1,4 @@
-﻿using Stack.WeChat.Contracts.Result;
-using Stack.WeChat.DataContract.Config;
-using Stack.WeChat.DataContract.Result;
+﻿using Stack.WeChat.DataContract.Result;
 
 namespace Stack.WeChat.Contracts
 {
@@ -12,9 +10,10 @@ namespace Stack.WeChat.Contracts
         /// <summary>
         /// 获取签名
         /// </summary>
+        /// <param name="appId"></param>
+        /// <param name="secretKey"></param>
         /// <param name="pageUrl">h5页面地址</param>
-        /// <param name="account">微信账户配置</param>
         /// <returns></returns>
-        ContractResult<WeChatSignatureResult> GetJsApiTicket(string pageUrl, WeChatAccount account);
+        ContractResult<WeChatSignatureResult> GetJsApiTicket(string appId, string secretKey, string pageUrl);
     }
 }

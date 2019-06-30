@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stack.WeChat.MP.Extensions;
+using System;
 
 namespace Stack.WeChat.MP.Security
 {
@@ -30,7 +31,7 @@ namespace Stack.WeChat.MP.Security
             string[] paramArray = new string[] { token, timestamp, nonce };
             Array.Sort(paramArray);//字典序排序
             string paramStrings = string.Join("", paramArray);//加密前字符串
-            string sha1ParamStrings = EncryptUtil.SHA1(paramStrings);//加密后字符串
+            string sha1ParamStrings = paramStrings.Encode();//加密后字符串
             return sha1ParamStrings.ToLower() == signature.ToLower();//验证签名是否相等
         }
     }

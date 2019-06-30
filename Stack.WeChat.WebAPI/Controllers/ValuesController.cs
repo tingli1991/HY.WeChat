@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Stack.WeChat.WebAPI.Attributes;
 
 namespace Stack.WeChat.WebAPI.Controllers
 {
@@ -6,13 +7,13 @@ namespace Stack.WeChat.WebAPI.Controllers
     /// 
     /// </summary>
     [Route("api/values")]
-    public class ValuesController : OAuthController
+    public class ValuesController : BasicsOAuthController
     {
         /// <summary>
-        ///  GET api/values
+        ///  GET 网页授权测试接口
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet, OAuthToken]
         public ActionResult<string> Get()
         {
             return "This is Check OAuth2.0 API";

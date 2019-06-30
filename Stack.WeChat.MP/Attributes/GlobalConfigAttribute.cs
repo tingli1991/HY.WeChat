@@ -50,7 +50,7 @@ namespace Stack.WeChat.MP.Attributes
                 return;
             }
 
-            var baseController = ((BaseController)context.Controller);
+            var baseController = ((Controllers.BaseController)context.Controller);
             baseController.AppId = query[appIdKey];//AppId
             baseController.Account = WeChatSettingsUtil.GetAccountConfig(baseController.AppId);
             if (baseController.Account == null)

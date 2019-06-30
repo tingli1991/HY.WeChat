@@ -1,13 +1,2 @@
-[DEBUG] 2019-06-29 00:00:41,015  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 00:04:06,858  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 00:11:28,631  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 00:20:53,799  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 00:21:52,570  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 00:24:41,224  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 00:25:12,336 Stack.WeChat.WebAPI.Attributes.CheckSignatureAttribute 【微信签名校验】请求参数=》signature：，timestamp：，nonce：，echostr：，appid：wx6fe5568ecfc233b3，openid：
-[DEBUG] 2019-06-29 00:30:45,547  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 01:15:32,232  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 01:25:33,321  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 01:29:38,917  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 09:18:22,520  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-06-29 11:59:37,236  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-06-30 02:22:15,595  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-06-30 02:24:17,522  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
