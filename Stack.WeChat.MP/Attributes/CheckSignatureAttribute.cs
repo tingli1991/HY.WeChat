@@ -52,6 +52,13 @@ namespace Stack.WeChat.MP.Attributes
                 _log.Debug($"【微信签名校验】请求参数=》signature：{signature}，timestamp：{timestamp}，nonce：{nonce}，echostr：{echostr}，appid：{account.AppId}，openid：{openId}");
                 return;
             }
+
+            if (context.HttpContext.Request.Method.Equals("GET", StringComparison.InvariantCultureIgnoreCase) && !string.IsNullOrEmpty(echostr))
+            {
+                ContentResult result = new ContentResult() { Content = echostr };
+                context.Result = result;
+                return;
+            }
         }
     }
 }

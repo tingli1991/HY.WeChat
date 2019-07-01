@@ -1,15 +1,11 @@
 ﻿using log4net;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using Stack.WeChat.DataContract.Param;
 using Stack.WeChat.Log4Net;
 using Stack.WeChat.MP.Attributes;
 using Stack.WeChat.MP.Controllers;
 using Stack.WeChat.MP.Utils;
-using System;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 
 namespace Stack.WeChat.WebAPI.Controllers
@@ -26,28 +22,16 @@ namespace Stack.WeChat.WebAPI.Controllers
         private static readonly ILog _log = Log4netUtil.GetLogger<IndexController>();
 
         /// <summary>
-        /// 验证消息的确来自微信服务器
-        /// 开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，GET请求携带参数如下表所示
-        /// </summary>
-        /// <param name="echostr">随机字符串</param>
-        /// <returns></returns>
-        [HttpGet, CheckSignature]
-        public ActionResult Get(string echostr)
-        {
-            return Content(echostr);
-        }
-
-        /// <summary>
         /// 微信消息接口接入入口
         /// </summary>
         /// <param name="param">请求参数</param>
         /// <returns></returns>
-        [HttpPost, CheckSignature]
-        public ActionResult Post(IndexPostParam param)
+        [CheckSignature]
+        public ActionResult Action(IndexPostParam param)
         {
             XDocument bodyXml = XmlUtility.Convert(Request.Body);
             XElement msgType = bodyXml.Descendants().FirstOrDefault(e => e.Name == "MsgType");
-            _log.Debug($"【微信消息接口接入入口】MsgType：{msgType.Value}，Url入参字符串：{Request.QueryString}，Xml入参字符串：{JsonConvert.SerializeObject(bodyXml)}");
+            _log.Debug($"【微信消息接口接入入口】MsgType：{msgType.Value}，Url入参字符串：{Request.QueryString}，Xml入参字符串：{bodyXml.ToString()}");
             return Content("");
         }
     }
