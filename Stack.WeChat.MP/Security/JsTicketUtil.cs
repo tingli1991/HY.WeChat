@@ -27,7 +27,7 @@ namespace Stack.WeChat.MP.Security
         /// <returns></returns>
         public static ContractResult<WeChatSignatureResult> GetJsApiTicket(string appId, string secretKey, string pageUrl)
         {
-            long timestamp = DateTime.Now.ToUnixTime();
+            long timestamp = DateTime.Now.ToUnixTimeForSeconds();
             string noncestr = random.GenString(32, true, false, true, false, "");
             ContractResult<WeChatSignatureResult> result = new ContractResult<WeChatSignatureResult>();
             var signatureResult = GetJsApiTicket(appId, secretKey, noncestr, timestamp, pageUrl);

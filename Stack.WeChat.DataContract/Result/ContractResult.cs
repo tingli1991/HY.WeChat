@@ -37,7 +37,7 @@ namespace Stack.WeChat.DataContract.Result
         public ContractResult()
         {
             //默认创建对象时设置为失败
-            SetError(MessageType.Fail);
+            SetError(ErrorCodeType.Fail);
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Stack.WeChat.DataContract.Result
         /// </summary>
         public void SetSuccess()
         {
-            MessageType messageType = MessageType.Success;
+            ErrorCodeType messageType = ErrorCodeType.Success;
             ErrorCode = $"{(int)messageType}";
             ErrorMessage = messageType.GetDescription();
         }
@@ -56,7 +56,7 @@ namespace Stack.WeChat.DataContract.Result
         /// <returns></returns>
         public bool IsSuccess()
         {
-            MessageType messageType = MessageType.Success;
+            ErrorCodeType messageType = ErrorCodeType.Success;
             return ErrorCode == $"{(int)messageType}";
         }
 
@@ -64,9 +64,9 @@ namespace Stack.WeChat.DataContract.Result
         /// 设置错误信息
         /// </summary>
         /// <param name="message">错误信息</param>
-        public void SetError(MessageType messageType)
+        public void SetError(ErrorCodeType messageType)
         {
-            ErrorCode = $"{(int)MessageType.Fail}";
+            ErrorCode = $"{(int)ErrorCodeType.Fail}";
             ErrorMessage = messageType.GetDescription();
         }
 

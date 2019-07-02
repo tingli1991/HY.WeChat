@@ -42,20 +42,30 @@ namespace Stack.WeChat.MP.Attributes
             ContractResult result = new ContractResult();
             IQueryCollection query = context.HttpContext.Request.Query;
             string appIdKey = query.Keys.FirstOrDefault(key => key.ToLower() == "appid");
+            string openIdKey = query.Keys.FirstOrDefault(key => key.ToLower() == "openid");
             if (string.IsNullOrWhiteSpace(appIdKey))
             {
-                result.SetError(MessageType.NoAppId);
+                result.SetError(ErrorCodeType.NoAppId);
                 context.Result = new JsonResult(result);
                 _log.Debug($"【全局配置过滤器】请求参数：{JsonConvert.SerializeObject(query)}");
                 return;
             }
 
-            var baseController = ((Controllers.BaseController)context.Controller);
-            baseController.AppId = query[appIdKey];//AppId
+            if (string.IsNullOrWhiteSpace(openIdKey))
+            {
+                result.SetError(ErrorCodeType.NoOpenId);
+                context.Result = new JsonResult(result);
+                _log.Debug($"【全局配置过滤器】请求参数：{JsonConvert.SerializeObject(query)}");
+                return;
+            }
+
+            var baseController = ((BaseController)context.Controller);
+            baseController.AppId = query[appIdKey];//公众号Id
+            baseController.OpenId = query[openIdKey];//用户的标识，对当前公众号唯一
             baseController.Account = WeChatSettingsUtil.GetAccountConfig(baseController.AppId);
             if (baseController.Account == null)
             {
-                result.SetError(MessageType.ConfigErr);
+                result.SetError(ErrorCodeType.ConfigErr);
                 context.Result = new JsonResult(result);
                 _log.Debug($"【全局配置过滤器】请求参数：{JsonConvert.SerializeObject(query)}");
                 return;

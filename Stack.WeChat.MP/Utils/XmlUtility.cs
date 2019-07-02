@@ -19,9 +19,10 @@
 *  
 ***************************************************************************/
 
+using Newtonsoft.Json;
+using Stack.WeChat.DataContract.MessageHandlers;
 using System;
 using System.IO;
-using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
@@ -38,19 +39,21 @@ namespace Stack.WeChat.MP.Utils
         /// </summary>
         /// <param name="xml">XML字符串</param>
         /// <returns></returns>
-        public static object Deserialize<T>(string xml)
+        public static T DeserializeObject<T>(string xml) where T : IMessageBase
         {
             try
             {
-                using (StringReader textReader = new StringReader(xml))
+                var root = new XmlRootAttribute("xml");
+                var serializer = new XmlSerializer(typeof(T), root);
+                using (var reader = new StringReader(xml))
                 {
-                    return new XmlSerializer(typeof(T)).Deserialize(textReader);
+                    return (T)serializer.Deserialize(reader);
                 }
             }
-            catch (Exception value)
+            catch (Exception ex)
             {
-                Console.WriteLine(value);
-                return null;
+                Console.WriteLine(ex);
+                return default;
             }
         }
 
@@ -59,9 +62,11 @@ namespace Stack.WeChat.MP.Utils
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        public static object Deserialize<T>(Stream stream)
+        public static T DeserializeObject<T>(Stream stream) where T : IMessageBase
         {
-            return new XmlSerializer(typeof(T)).Deserialize(stream);
+            var root = new XmlRootAttribute("xml");
+            var serializer = new XmlSerializer(typeof(T), root);
+            return (T)serializer.Deserialize(stream);
         }
 
         /// <summary>
@@ -70,13 +75,14 @@ namespace Stack.WeChat.MP.Utils
         /// </summary>
         /// <param name="obj">对象</param>
         /// <returns></returns>
-        public static string Serializer<T>(T obj)
+        public static string SerializeObject<T>(T message) where T : IMessageBase
         {
+            var root = new XmlRootAttribute("xml");
             MemoryStream memoryStream = new MemoryStream();
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(T), root);
             try
             {
-                xmlSerializer.Serialize(memoryStream, obj);
+                xmlSerializer.Serialize(memoryStream, message);
             }
             catch (InvalidOperationException)
             {
@@ -95,7 +101,7 @@ namespace Stack.WeChat.MP.Utils
         /// </summary>
         /// <param name="stream">文件流</param>
         /// <returns></returns>
-        public static XDocument Convert(Stream stream)
+        public static XDocument SerializeObject(Stream stream)
         {
             if (stream.CanSeek)
             {

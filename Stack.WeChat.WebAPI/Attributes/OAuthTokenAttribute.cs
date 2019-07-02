@@ -54,7 +54,7 @@ namespace Stack.WeChat.WebAPI.Attributes
                 string urlKey = context.HttpContext.Request.Query.Keys.FirstOrDefault(key => key.ToLower() == "url");
                 if (string.IsNullOrEmpty(urlKey))
                 {
-                    result.SetError(MessageType.InvalidUrl);
+                    result.SetError(ErrorCodeType.InvalidUrl);
                     context.Result = new JsonResult(result);
                     return;
                 }

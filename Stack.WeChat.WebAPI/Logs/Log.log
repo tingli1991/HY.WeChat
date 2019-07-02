@@ -1,52 +1,47 @@
-[DEBUG] 2019-07-01 00:11:01,269  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:12:03,976 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：<xml><ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
-<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
-<CreateTime>1561910879</CreateTime>
-<MsgType><![CDATA[image]]></MsgType>
-<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0]]></PicUrl>
-<MsgId>22361186792637947</MsgId>
-<MediaId><![CDATA[-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts]]></MediaId>
-</xml>,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
-[DEBUG] 2019-07-01 00:13:03,237  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:25:52,355  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:28:34,669  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:34:26,782  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:35:14,890 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：<xml><ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
-<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
-<CreateTime>1561910879</CreateTime>
-<MsgType><![CDATA[image]]></MsgType>
-<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0]]></PicUrl>
-<MsgId>22361186792637947</MsgId>
-<MediaId><![CDATA[-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts]]></MediaId>
-</xml>,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
-[DEBUG] 2019-07-01 00:36:52,787  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:37:49,139 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
-[DEBUG] 2019-07-01 00:38:37,812  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:38:51,312 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】请求链接参数：[{"Key":"appid","Value":["wx6fe5568ecfc233b3"]},{"Key":"signature","Value":["8cec2788931dbb9a2989ce4a02842521ef1c1e94"]},{"Key":"timestamp","Value":["1561910880"]},{"Key":"nonce","Value":["1651364756"]},{"Key":"openid","Value":["oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"]}]文件流参数：,请求参数字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys
-[DEBUG] 2019-07-01 00:51:41,910  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 00:57:09,398  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 01:02:27,226  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 01:02:37,280 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：<MsgType><![CDATA[image]]></MsgType>,Url参数：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml参数：{"xml":{"ToUserName":{"#cdata-section":"gh_278e0d60f6d6"},"#text":["\n","\n","\n","\n","\n","\n","\n"],"FromUserName":{"#cdata-section":"oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"},"CreateTime":"1561910879","MsgType":{"#cdata-section":"image"},"PicUrl":{"#cdata-section":"http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0"},"MsgId":"22361186792637947","MediaId":{"#cdata-section":"-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts"}}}
-[DEBUG] 2019-07-01 01:05:56,789  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 01:09:14,996  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 01:10:48,007  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 01:10:55,638 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：<MsgType><![CDATA[image]]></MsgType>，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：{"xml":{"ToUserName":{"#cdata-section":"gh_278e0d60f6d6"},"#text":["\n","\n","\n","\n","\n","\n","\n"],"FromUserName":{"#cdata-section":"oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"},"CreateTime":"1561910879","MsgType":{"#cdata-section":"image"},"PicUrl":{"#cdata-section":"http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0"},"MsgId":"22361186792637947","MediaId":{"#cdata-section":"-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts"}}}
-[DEBUG] 2019-07-01 11:52:09,009  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 11:52:36,463 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：image，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：{"xml":{"ToUserName":{"#cdata-section":"gh_278e0d60f6d6"},"#text":["\n","\n","\n","\n","\n","\n","\n"],"FromUserName":{"#cdata-section":"oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"},"CreateTime":"1561910879","MsgType":{"#cdata-section":"image"},"PicUrl":{"#cdata-section":"http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0"},"MsgId":"22361186792637947","MediaId":{"#cdata-section":"-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts"}}}
-[DEBUG] 2019-07-01 11:53:42,103  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 12:02:30,646  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 12:02:48,749 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：image，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：{"xml":{"ToUserName":{"#cdata-section":"gh_278e0d60f6d6"},"#text":["\n","\n","\n","\n","\n","\n","\n"],"FromUserName":{"#cdata-section":"oR6RZ6ORUbnhxmfpcUKRr1yVU-ys"},"CreateTime":"1561910879","MsgType":{"#cdata-section":"image"},"PicUrl":{"#cdata-section":"http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0"},"MsgId":"22361186792637947","MediaId":{"#cdata-section":"-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts"}}}
-[DEBUG] 2019-07-01 13:14:12,701  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 13:15:16,328 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：image，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
+[DEBUG] 2019-07-03 00:09:39,155  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 00:11:06,986  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 00:27:10,317  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 00:49:52,193  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 00:53:08,665  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 00:53:34,507 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
   <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
 <FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
-<CreateTime>1561910879</CreateTime>
-<MsgType><![CDATA[image]]></MsgType>
-<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/XOx4O18cnpThZKIzGcPPUhpobXwrdYZ7p7Ttmn4fcy08EVfibZsvUE02Er2gTYSSj92sXma5ib6EGicKue1vZ3QrQ/0]]></PicUrl>
-<MsgId>22361186792637947</MsgId>
-<MediaId><![CDATA[-7Dib7YgFzpYfx1ImIwBvRSnp_1gb9MZI3yXAiBTy2dkrXZol5sWQEKewo6Bnyts]]></MediaId>
+<CreateTime>1562069669</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[啦啦啦啦啦]]></Content>
+<MsgId>22363458404048046</MsgId>
 </xml>
-[DEBUG] 2019-07-01 14:17:57,925  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 14:18:05,817  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 14:18:32,593  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-01 14:20:19,344  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 01:15:58,905  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 01:16:55,296 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
+  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
+<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
+<CreateTime>1562069669</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[啦啦啦啦啦]]></Content>
+<MsgId>22363458404048046</MsgId>
+</xml>
+[DEBUG] 2019-07-03 01:20:25,858  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 01:20:46,593 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
+  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
+<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
+<CreateTime>1562069669</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[啦啦啦啦啦]]></Content>
+<MsgId>22363458404048046</MsgId>
+</xml>
+[DEBUG] 2019-07-03 01:22:51,065  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 02:42:11,610  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[ERROR] 2019-07-03 02:42:52,743 Stack.WeChat.MP.Attributes.GlobalExceptionAttribute 【全局异常】发生未经处理的全局异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at Stack.WeChat.MP.MessageHandlers.MessageHandlerProvider.Handler() in D:\Visual Studio\Stack.WeChat\Stack.WeChat.MP\MessageHandlers\MessageHandlerProvider.cs:line 101
+   at Stack.WeChat.WebAPI.Controllers.IndexController.Action(IndexPostParam param) in D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Controllers\IndexController.cs:line 37
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+[DEBUG] 2019-07-03 02:44:14,785  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-03 02:45:31,308  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。

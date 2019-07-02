@@ -19,7 +19,6 @@
 *  
 ***************************************************************************/
 
-
 namespace Stack.WeChat.DataContract.Enums
 {
     /// <summary>

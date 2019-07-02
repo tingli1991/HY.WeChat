@@ -11,9 +11,14 @@ namespace Stack.WeChat.MP.Controllers
     public class BaseController : Controller
     {
         /// <summary>
-        /// AppId
+        /// 公众号Id
         /// </summary>
         public string AppId { get; set; }
+
+        /// <summary>
+        /// 用户的标识，对当前公众号唯一
+        /// </summary>
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 微信公众号账户信息

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Stack.WeChat.Log4Net;
 using System.IO;
+using Stack.WeChat.MP.Extensions;
 
 namespace Stack.WeChat.WebAPI
 {
@@ -31,6 +32,7 @@ namespace Stack.WeChat.WebAPI
             .UseIISIntegration()
             .UseStartup<Startup>()
             .UseLog4net($"{Directory.GetCurrentDirectory()}\\Config\\log4net.config")
+            .RegisterMessageHandler("Stack.WeChat.Service")
             .Build();
     }
 }

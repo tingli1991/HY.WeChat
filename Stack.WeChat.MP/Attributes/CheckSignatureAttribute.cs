@@ -47,7 +47,7 @@ namespace Stack.WeChat.MP.Attributes
             if (!SignatureVerifyUtil.CheckSignature(signature, timestamp, nonce, account.Token))
             {
                 ContractResult result = new ContractResult();
-                result.SetError(MessageType.CheckSignFail);
+                result.SetError(ErrorCodeType.CheckSignFail);
                 context.Result = new JsonResult(result);
                 _log.Debug($"【微信签名校验】请求参数=》signature：{signature}，timestamp：{timestamp}，nonce：{nonce}，echostr：{echostr}，appid：{account.AppId}，openid：{openId}");
                 return;

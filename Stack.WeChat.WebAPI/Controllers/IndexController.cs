@@ -1,9 +1,11 @@
 ﻿using log4net;
 using Microsoft.AspNetCore.Mvc;
+using Stack.WeChat.DataContract.MessageHandlers;
 using Stack.WeChat.DataContract.Param;
 using Stack.WeChat.Log4Net;
 using Stack.WeChat.MP.Attributes;
 using Stack.WeChat.MP.Controllers;
+using Stack.WeChat.MP.MessageHandlers;
 using Stack.WeChat.MP.Utils;
 using System.Linq;
 using System.Xml.Linq;
@@ -29,8 +31,10 @@ namespace Stack.WeChat.WebAPI.Controllers
         [CheckSignature]
         public ActionResult Action(IndexPostParam param)
         {
-            XDocument bodyXml = XmlUtility.Convert(Request.Body);
+            XDocument bodyXml = XmlUtility.SerializeObject(Request.Body);
             XElement msgType = bodyXml.Descendants().FirstOrDefault(e => e.Name == "MsgType");
+            MessageHandlerProvider provider = new MessageHandlerProvider(OpenId, Account, bodyXml);
+            provider.Handler();
             _log.Debug($"【微信消息接口接入入口】MsgType：{msgType.Value}，Url入参字符串：{Request.QueryString}，Xml入参字符串：{bodyXml.ToString()}");
             return Content("");
         }

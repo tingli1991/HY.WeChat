@@ -28,7 +28,7 @@ namespace Stack.WeChat.MP.Attributes
             Exception ex = context.Exception;
             context.ExceptionHandled = true;
             var result = new ContractResult();
-            result.SetError(MessageType.Exception);
+            result.SetError(ErrorCodeType.Exception);
             context.Result = new JsonResult(result);
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.OK;
             _log.Error($"【全局异常】发生未经处理的全局异常：{ex}");
