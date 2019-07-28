@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Stack.WeChat.Log4Net;
-using System.IO;
 using Stack.WeChat.MP.Extensions;
+using System.IO;
 
 namespace Stack.WeChat.WebAPI
 {
@@ -27,6 +27,7 @@ namespace Stack.WeChat.WebAPI
         /// <returns></returns>
         public static IWebHost CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            .UseUrls("http://*:83")
             .UseKestrel()
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseIISIntegration()

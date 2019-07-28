@@ -1,38 +1,17 @@
-[DEBUG] 2019-07-03 00:09:39,155  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 00:11:06,986  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 00:27:10,317  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 00:49:52,193  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 00:53:08,665  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 00:53:34,507 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
-  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
-<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
-<CreateTime>1562069669</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[啦啦啦啦啦]]></Content>
-<MsgId>22363458404048046</MsgId>
-</xml>
-[DEBUG] 2019-07-03 01:15:58,905  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 01:16:55,296 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
-  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
-<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
-<CreateTime>1562069669</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[啦啦啦啦啦]]></Content>
-<MsgId>22363458404048046</MsgId>
-</xml>
-[DEBUG] 2019-07-03 01:20:25,858  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 01:20:46,593 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
-  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
-<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
-<CreateTime>1562069669</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[啦啦啦啦啦]]></Content>
-<MsgId>22363458404048046</MsgId>
-</xml>
-[DEBUG] 2019-07-03 01:22:51,065  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 02:42:11,610  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[ERROR] 2019-07-03 02:42:52,743 Stack.WeChat.MP.Attributes.GlobalExceptionAttribute 【全局异常】发生未经处理的全局异常：System.NullReferenceException: Object reference not set to an instance of an object.
-   at Stack.WeChat.MP.MessageHandlers.MessageHandlerProvider.Handler() in D:\Visual Studio\Stack.WeChat\Stack.WeChat.MP\MessageHandlers\MessageHandlerProvider.cs:line 101
+[DEBUG] 2019-07-04 00:03:34,770  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:05:00,359  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:10:38,292  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:19:14,158  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:37:06,066  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:38:03,137  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:41:34,086  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:42:11,891  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[ERROR] 2019-07-04 00:43:32,570 Stack.WeChat.MP.Attributes.GlobalExceptionAttribute 【全局异常】发生未经处理的全局异常：System.ArgumentException: Requested value '7.3' was not found.
+   at System.Enum.TryParseEnum(Type enumType, String value, Boolean ignoreCase, EnumResult& parseResult)
+   at System.Enum.Parse(Type enumType, String value, Boolean ignoreCase)
+   at Stack.WeChat.MP.Extensions.MessageTypeExtensions.ToEnum[T](String messageType) in D:\Visual Studio\Stack.WeChat\Stack.WeChat.MP\Extensions\MessageTypeExtensions.cs:line 109
+   at Stack.WeChat.MP.Extensions.MessageTypeExtensions.ToRequestMessageType(String messageType) in D:\Visual Studio\Stack.WeChat\Stack.WeChat.MP\Extensions\MessageTypeExtensions.cs:line 89
+   at Stack.WeChat.MP.MessageHandlers.MessageHandlerProvider.Handler() in D:\Visual Studio\Stack.WeChat\Stack.WeChat.MP\MessageHandlers\MessageHandlerProvider.cs:line 102
    at Stack.WeChat.WebAPI.Controllers.IndexController.Action(IndexPostParam param) in D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Controllers\IndexController.cs:line 37
    at lambda_method(Closure , Object , Object[] )
    at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
@@ -43,5 +22,30 @@
    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
-[DEBUG] 2019-07-03 02:44:14,785  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
-[DEBUG] 2019-07-03 02:45:31,308  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 00:43:57,486 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
+  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
+<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
+<CreateTime>1562069669</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[啦啦啦啦啦]]></Content>
+<MsgId>22363458404048046</MsgId>
+</xml>
+[DEBUG] 2019-07-04 01:43:14,098  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 01:50:53,186  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 02:17:18,931  初始化 D:\Visual Studio\Stack.WeChat\Stack.WeChat.WebAPI\Config\log4net.config 完成。
+[DEBUG] 2019-07-04 02:17:52,552 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
+  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
+<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
+<CreateTime>1562069669</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[啦啦啦啦啦]]></Content>
+<MsgId>22363458404048046</MsgId>
+</xml>
+[DEBUG] 2019-07-04 02:18:07,449 Stack.WeChat.WebAPI.Controllers.IndexController 【微信消息接口接入入口】MsgType：text，Url入参字符串：?appid=wx6fe5568ecfc233b3&signature=8cec2788931dbb9a2989ce4a02842521ef1c1e94&timestamp=1561910880&nonce=1651364756&openid=oR6RZ6ORUbnhxmfpcUKRr1yVU-ys，Xml入参字符串：<xml>
+  <ToUserName><![CDATA[gh_278e0d60f6d6]]></ToUserName>
+<FromUserName><![CDATA[oR6RZ6ORUbnhxmfpcUKRr1yVU-ys]]></FromUserName>
+<CreateTime>1562069669</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[啦啦啦啦啦]]></Content>
+<MsgId>22363458404048046</MsgId>
+</xml>

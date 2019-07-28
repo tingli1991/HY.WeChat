@@ -39,7 +39,7 @@ namespace Stack.WeChat.MP.Utils
         /// </summary>
         /// <param name="xml">XML字符串</param>
         /// <returns></returns>
-        public static T DeserializeObject<T>(string xml) where T : IMessageBase
+        public static T DeserializeObject<T>(string xml) where T : IMessageModel
         {
             try
             {
@@ -62,7 +62,7 @@ namespace Stack.WeChat.MP.Utils
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        public static T DeserializeObject<T>(Stream stream) where T : IMessageBase
+        public static T DeserializeObject<T>(Stream stream) where T : IMessageModel
         {
             var root = new XmlRootAttribute("xml");
             var serializer = new XmlSerializer(typeof(T), root);
@@ -75,7 +75,7 @@ namespace Stack.WeChat.MP.Utils
         /// </summary>
         /// <param name="obj">对象</param>
         /// <returns></returns>
-        public static string SerializeObject<T>(T message) where T : IMessageBase
+        public static string SerializeObject<T>(T message) where T : IMessageModel
         {
             var root = new XmlRootAttribute("xml");
             MemoryStream memoryStream = new MemoryStream();
